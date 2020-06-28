@@ -5,30 +5,37 @@
 <script src="JSCPP.es5.min.js"></script>
 
 <body>
-  <textarea id='editor'>int main(){
-    return 0;
-  }</textarea>
+  <textarea id='editor'>
+#include <stdio.h>
+int main(){
+  return 0;
+}
+  </textarea>
+  <button onclick="run()">Run</button>
 </body>
 
 <script type="text/javascript">
-
   var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
     mode: "clike",
     lineNumbers: true,
   });
   editor.save()
 
-  var code = "#include <stdio.h> \n int main(){printf(\"hello js\"); return 0;}";
-  var input = "";
-  var output = "";
-  var conf = {
-    stdio: {
-      write: function (s) {
-        output += s;
+  var run = function () {
+
+    var code = editor.getValue();
+    var input = "";
+    var output = "";
+    var conf = {
+      stdio: {
+        write: function (s) {
+          output += s;
+        }
       }
-    }
-  };
-  var exitCode = JSCPP.run(code, input, conf);
-  // alert(output);
+    };
+    var exitCode = JSCPP.run(code, input, conf);
+    alert(output);
+  }
+
 
 </script>
