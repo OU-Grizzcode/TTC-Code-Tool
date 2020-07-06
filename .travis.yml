@@ -10,3 +10,5 @@ deploy:
   local_dir: build
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+  on:
+    branch: release
