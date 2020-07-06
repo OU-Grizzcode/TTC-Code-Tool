@@ -1,2 +1,24 @@
-# TTC-Code-Tool
-A tool for learning the basics of programming with a teaching philosophy that focuses on the applications of what you're learning.
+# grizz-code
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
