@@ -14,7 +14,8 @@ const routes = [
   {
     path: '/challenge/:id',
     name: 'Challenge',
-    component: ChallengeView
+    component: ChallengeView,
+    props: true
   }
 ]
 

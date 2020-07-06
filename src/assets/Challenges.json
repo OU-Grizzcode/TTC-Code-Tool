@@ -3,6 +3,8 @@
 		"title": "Hello World",
 		"shortDescription": "A good first challenge.",
 		"description": "Print \"hello world\".",
+		"highlighting": "clike",
+		"lang": "c",
 		"id": 0,
 		"tags": [
 			"beginner",
@@ -14,13 +16,15 @@
 				"output": "hello world"
 			}
 		],
-		"templateCode": "",
+		"templateCode": "#include <stdio.h>\nint main(){\n  //TODO: print \"hello world\"\n  return 0;\n}",
 		"hiddenCode": "${user-code}$"
 	},
 	{
 		"title": "Factorial",
 		"shortDescription": "Write a function that calculates factorial.",
 		"description": "Write a function that calculates factorial. 5 factorial is, for example, 5*4*3*2*1.",
+		"highlighting": "clike",
+		"lang": "c",
 		"id": 1,
 		"tags": [
 			"intermediate",
@@ -33,8 +37,8 @@
 				"output": "1"
 			},
 			{
-				"input": "0",
-				"output": "0"
+				"input": "3",
+				"output": "6"
 			},
 			{
 				"input": "2",
@@ -49,7 +53,7 @@
 				"output": "120"
 			}
 		],
-		"templateCode": "void factorial(int i){\n    return 0; // TODO: make return factorial\n}",
-		"hiddenCode": "#include \"stdio.h\"\n${user-code}$\n int main(){printf(\"%d\", factorial(scanf(\"%d\"))); return 0;}"
+		"templateCode": "int factorial(int i){\n    return 0; // TODO: make return factorial\n}",
+		"hiddenCode": "#include \"stdio.h\"\n${user-code}$\n int main(){ int i; scanf(\"%d\", &i); printf(\"%d\", factorial(i)); return 0;}"
 	}
 ]
