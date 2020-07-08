@@ -40,4 +40,8 @@ export default {};
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.md-card {
+  margin: 20px;
+}
 </style>
