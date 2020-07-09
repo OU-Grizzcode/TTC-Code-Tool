@@ -1,10 +1,17 @@
 <template>
   <div id="app">
     <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
       rel="stylesheet"
-      href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons"
     />
-    <router-view />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons|Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet" />
+    <v-scroll-x-transition :hide-on-leave="true">
+      <router-view />
+    </v-scroll-x-transition>
   </div>
 </template>
 
@@ -13,19 +20,6 @@ export default {};
 </script>
 
 <style lang="scss">
-@import "~vue-material/dist/theme/engine"; // Import the theme engine
-
-@include md-register-theme(
-  "default",
-  (
-    primary: md-get-palette-color(blue, A200),
-    // The primary color of your application
-      accent: md-get-palette-color(red, A200) // The accent or secondary color
-  )
-);
-
-@import "~vue-material/dist/theme/all"; // Apply the theme
-
 #app {
   font-family: Roboto;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +35,7 @@ export default {};
   justify-content: space-around;
 }
 
-.md-card {
+.v-card {
   margin: 20px;
 }
 </style>

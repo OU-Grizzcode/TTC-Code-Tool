@@ -1,45 +1,20 @@
 <template>
   <div>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">{{challenges[id].title}}</div>
-      </md-card-header>
+    <v-card>
+      <v-card-title>{{challenges[id].title}}</v-card-title>
 
-      <md-card-content>
+      <v-card-text>
         {{challenges[id].description}}
         <codemirror class="codemirror" v-model="code" :options="cmOptions" />
-      </md-card-content>
+      </v-card-text>
 
-      <md-card-actions>
-        <md-button v-on:click="run()">Run</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card v-if="timesRun > 0">
-      <md-card-header>
-        <div class="md-title">
-          Results
-          <md-icon
-            style="color: rgb(150,255,100);"
-            class="md-size-2x"
-            v-if="failingTests == 0 && error == ''"
-          >check_circle</md-icon>
-          <md-icon style="color: rgb(255, 25, 75);" class="md-size-2x" v-if="error != ''">error</md-icon>
-          <md-icon
-            style="color: rgb(255,200,0);"
-            class="md-size-2x"
-            v-if="failingTests != 0 && error == ''"
-          >warning</md-icon>
-        </div>
-      </md-card-header>
-      <md-card-content>
-        <textarea v-if="error != ''" class="errorarea" v-model="error" readonly="true" />
-        <div v-if="error==''">
-          <h4>Passing: {{passingTests}}</h4>
-          <h4>Failing: {{failingTests}}</h4>
-        </div>
-      </md-card-content>
-    </md-card>
+      <v-card-actions>
+        <v-btn text v-on:click="run()">Run</v-btn>
+      </v-card-actions>
+    </v-card>
+    <v-scroll-y-transition :hide-on-leave="true">
+      <results-card v-if="timesRun > 0" :results="results" :key="timesRun" />
+    </v-scroll-y-transition>
   </div>
 </template>
 <script>
@@ -62,18 +37,8 @@ export default {
         mode: "",
         showCursorWhenSelecting: true,
         passingTests: 0,
-        failingTests: 0
-      },
-      cmErrorBoxOptions: {
-        tabSize: 2,
-        readOnly: true,
-        styleActiveLine: false,
-        lineNumbers: false,
-        line: true,
-        mode: "",
-        showCursorWhenSelecting: true,
-        passingTests: 0,
-        failingTests: 0
+        failingTests: 0,
+        results: Object
       }
     };
   },
@@ -122,6 +87,11 @@ export default {
 
       this.passingTests = passed;
       this.failingTests = failed;
+      this.results = {
+        passingTests: this.passingTests,
+        failingTests: this.failingTests,
+        error: this.error
+      };
     }
   },
   mounted() {
@@ -134,16 +104,6 @@ export default {
 <style scoped>
 .codemirror {
   text-align: left;
-}
-.errorarea {
-  width: 90%;
-  height: 20vh;
-  resize: none;
-  outline: 0px;
-  border: none;
-  border-radius: 5px;
-  background: whitesmoke;
-  padding: 10px;
 }
 
 h4 {
