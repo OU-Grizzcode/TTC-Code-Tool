@@ -1,45 +1,41 @@
 <template>
   <div>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">{{challenges[id].title}}</div>
-      </md-card-header>
+    <v-card>
+      <v-card-title>{{challenges[id].title}}</v-card-title>
 
-      <md-card-content>
+      <v-card-text>
         {{challenges[id].description}}
         <codemirror class="codemirror" v-model="code" :options="cmOptions" />
-      </md-card-content>
+      </v-card-text>
 
-      <md-card-actions>
-        <md-button v-on:click="run()">Run</md-button>
-      </md-card-actions>
-    </md-card>
+      <v-card-actions>
+        <v-btn text v-on:click="run()">Run</v-btn>
+      </v-card-actions>
+    </v-card>
 
-    <md-card v-if="timesRun > 0">
-      <md-card-header>
-        <div class="md-title">
-          Results
-          <md-icon
-            style="color: rgb(150,255,100);"
-            class="md-size-2x"
-            v-if="failingTests == 0 && error == ''"
-          >check_circle</md-icon>
-          <md-icon style="color: rgb(255, 25, 75);" class="md-size-2x" v-if="error != ''">error</md-icon>
-          <md-icon
-            style="color: rgb(255,200,0);"
-            class="md-size-2x"
-            v-if="failingTests != 0 && error == ''"
-          >warning</md-icon>
-        </div>
-      </md-card-header>
-      <md-card-content>
+    <v-card v-if="timesRun > 0">
+      <v-card-title>
+        Results
+        <v-icon
+          large
+          style="color: rgb(46,234,0);"
+          v-if="failingTests == 0 && error == ''"
+        >check_circle_round</v-icon>
+        <v-icon large style="color: rgb(255, 25, 75);" v-if="error != ''">error_round</v-icon>
+        <v-icon
+          large
+          style="color: rgb(255,200,0);"
+          v-if="failingTests != 0 && error == ''"
+        >warning_round</v-icon>
+      </v-card-title>
+      <v-card-text>
         <textarea v-if="error != ''" class="errorarea" v-model="error" readonly="true" />
         <div v-if="error==''">
           <h4>Passing: {{passingTests}}</h4>
           <h4>Failing: {{failingTests}}</h4>
         </div>
-      </md-card-content>
-    </md-card>
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 <script>

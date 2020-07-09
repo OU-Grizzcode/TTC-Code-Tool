@@ -1,20 +1,26 @@
 <template>
-  <md-card v-bind:md-with-hover="true">
-    <md-card-header>
-      <div class="md-title">{{challenge.title}}</div>
-      <div class="md-subhead">
-        <md-chip class="md-accent" v-for="tag in challenge.tags" v-bind:key="tag">{{tag}}</md-chip>
-      </div>
-    </md-card-header>
-    <md-card-content>{{challenge.shortDescription}}</md-card-content>
-    <md-card-actions>
-      <md-button :to="{ name: 'Challenge', params: { id: this.challenge.id } }">Try It!</md-button>
-    </md-card-actions>
-  </md-card>
+  <!-- Yeah, I know vuetify has a hover component, this is honestly easier. -->
+  <v-card
+    :class="`elevation-${hover? 10: 1}`"
+    @mouseover="hover = true"
+    @mouseleave="hover = false"
+  >
+    <v-card-title>{{challenge.title}}</v-card-title>
+    <div>
+      <v-chip v-for="tag in challenge.tags" v-bind:key="tag">{{tag}}</v-chip>
+    </div>
+    <v-card-text>{{challenge.shortDescription}}</v-card-text>
+    <v-card-actions>
+      <v-btn text :to="{ name: 'Challenge', params: { id: this.challenge.id } }">Try It!</v-btn>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
 export default {
+  data: () => {
+    return { hover: false };
+  },
   props: {
     challenge: Object
   }
@@ -22,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-.md-card {
+.v-card {
   width: 320px;
   margin: 4px;
   margin-top: 25px;
@@ -31,7 +37,8 @@ export default {
   border-radius: 10px;
   cursor: default;
 }
-.md-chip {
+.v-chip {
   cursor: pointer;
+  margin: 0 5px 0 5px;
 }
 </style>

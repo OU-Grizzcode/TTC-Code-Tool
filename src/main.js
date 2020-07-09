@@ -2,18 +2,20 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
 import VueGrid from '@liqueflies/vue-flex-grid'
 import ChallengeCard from "./components/ChallengeCard.vue";
 import VueCodemirror from 'vue-codemirror';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/clike/clike.js';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
 Vue.config.productionTip = false;
-Vue.use(VueMaterial);
+
 Vue.use(VueGrid);
 Vue.use(VueCodemirror);
+Vue.use(Vuetify);
+
 Vue.component("challenge-card", ChallengeCard);
 
 new Vue({

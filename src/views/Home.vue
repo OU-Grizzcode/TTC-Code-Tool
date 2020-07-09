@@ -1,17 +1,15 @@
 <template>
   <div class="home">
-    <md-card>
-      <md-card-header>
-        <div class="md-title">Welcome to Grizzcode!</div>
-      </md-card-header>
-      <md-card-content>
+    <v-card>
+      <v-card-title>Welcome to Grizzcode!</v-card-title>
+      <v-card-text>
         Grizzcode is an interactive website from the OU Tutoring Center to
         help students learn programming. You can choose a challenge below, or, if you're new, you can start with a
         <a
           href
         >tutorial</a>.
-      </md-card-content>
-    </md-card>
+      </v-card-text>
+    </v-card>
 
     <div class="wrappingRow">
       <challenge-card
