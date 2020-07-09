@@ -9,6 +9,7 @@ import 'codemirror/lib/codemirror.css';
 import 'codemirror/mode/clike/clike.js';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
+import ResultsCard from './components/ResultsCard.vue';
 
 Vue.config.productionTip = false;
 
@@ -17,9 +18,10 @@ Vue.use(VueCodemirror);
 Vue.use(Vuetify);
 
 Vue.component("challenge-card", ChallengeCard);
+Vue.component("results-card", ResultsCard);
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');

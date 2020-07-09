@@ -12,30 +12,9 @@
         <v-btn text v-on:click="run()">Run</v-btn>
       </v-card-actions>
     </v-card>
-
-    <v-card v-if="timesRun > 0">
-      <v-card-title>
-        Results
-        <v-icon
-          large
-          style="color: rgb(46,234,0);"
-          v-if="failingTests == 0 && error == ''"
-        >check_circle_round</v-icon>
-        <v-icon large style="color: rgb(255, 25, 75);" v-if="error != ''">error_round</v-icon>
-        <v-icon
-          large
-          style="color: rgb(255,200,0);"
-          v-if="failingTests != 0 && error == ''"
-        >warning_round</v-icon>
-      </v-card-title>
-      <v-card-text>
-        <textarea v-if="error != ''" class="errorarea" v-model="error" readonly="true" />
-        <div v-if="error==''">
-          <h4>Passing: {{passingTests}}</h4>
-          <h4>Failing: {{failingTests}}</h4>
-        </div>
-      </v-card-text>
-    </v-card>
+    <v-scroll-y-transition :hide-on-leave="true">
+      <results-card v-if="timesRun > 0" :results="results" :key="timesRun" />
+    </v-scroll-y-transition>
   </div>
 </template>
 <script>
@@ -58,18 +37,8 @@ export default {
         mode: "",
         showCursorWhenSelecting: true,
         passingTests: 0,
-        failingTests: 0
-      },
-      cmErrorBoxOptions: {
-        tabSize: 2,
-        readOnly: true,
-        styleActiveLine: false,
-        lineNumbers: false,
-        line: true,
-        mode: "",
-        showCursorWhenSelecting: true,
-        passingTests: 0,
-        failingTests: 0
+        failingTests: 0,
+        results: Object
       }
     };
   },
@@ -118,6 +87,11 @@ export default {
 
       this.passingTests = passed;
       this.failingTests = failed;
+      this.results = {
+        passingTests: this.passingTests,
+        failingTests: this.failingTests,
+        error: this.error
+      };
     }
   },
   mounted() {
@@ -130,16 +104,6 @@ export default {
 <style scoped>
 .codemirror {
   text-align: left;
-}
-.errorarea {
-  width: 90%;
-  height: 20vh;
-  resize: none;
-  outline: 0px;
-  border: none;
-  border-radius: 5px;
-  background: whitesmoke;
-  padding: 10px;
 }
 
 h4 {

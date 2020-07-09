@@ -9,7 +9,9 @@
       rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet" />
-    <router-view />
+    <v-scroll-x-transition :hide-on-leave="true">
+      <router-view />
+    </v-scroll-x-transition>
   </div>
 </template>
 
