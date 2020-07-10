@@ -1,10 +1,15 @@
 <template>
   <div>
     <v-card>
-      <v-card-title>{{challenges[id].title}}</v-card-title>
+      <v-card-title>
+        <v-btn @click="goBack()" icon>
+          <v-icon>arrow_back</v-icon>
+        </v-btn>
+        {{ challenges[id].title }}
+      </v-card-title>
 
       <v-card-text>
-        {{challenges[id].description}}
+        {{ challenges[id].description }}
         <codemirror class="codemirror" v-model="code" :options="cmOptions" />
       </v-card-text>
 
@@ -20,6 +25,7 @@
 <script>
 import Store from "../store";
 import CInterpreter from "../CInterpreter.js";
+import Router from "../router";
 
 export default {
   name: "ChallengeView",
@@ -49,6 +55,10 @@ export default {
     }
   },
   methods: {
+    goBack() {
+      Router.go(-1);
+    },
+
     run() {
       this.timesRun++;
       var challenge = this.challenges[this.id];
@@ -108,5 +118,9 @@ export default {
 
 h4 {
   margin: 2px;
+}
+
+.v-btn:before {
+  opacity: 0;
 }
 </style>
