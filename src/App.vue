@@ -8,7 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons|Material+Icons+Round"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
     <v-scroll-x-transition :hide-on-leave="true">
       <router-view />
     </v-scroll-x-transition>
