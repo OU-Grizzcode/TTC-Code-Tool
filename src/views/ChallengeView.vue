@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-card>
-      <v-card-title>{{challenges[id].title}}</v-card-title>
+      <v-card-title>{{ challenges[id].title }}</v-card-title>
 
       <v-card-text>
-        {{challenges[id].description}}
+        {{ challenges[id].description }}
         <codemirror class="codemirror" v-model="code" :options="cmOptions" />
       </v-card-text>
 
@@ -108,5 +108,9 @@ export default {
 
 h4 {
   margin: 2px;
+}
+
+.v-btn:before {
+  opacity: 0;
 }
 </style>
