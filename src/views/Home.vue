@@ -3,10 +3,11 @@
     <v-card>
       <v-card-title>Welcome to Grizzcode!</v-card-title>
       <v-card-text>
-        Grizzcode is an interactive website from the OU Tutoring Center to help
-        students learn programming. You can choose a challenge below, or, if
-        you're new, you can start with a
-        <a href>tutorial</a>.
+        Grizzcode is an interactive website from the OU Tutoring Center to
+        help students learn programming. You can choose a challenge below, or, if you're new, you can start with a
+        <a
+          href
+        >tutorial</a>.
       </v-card-text>
     </v-card>
 

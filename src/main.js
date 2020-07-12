@@ -1,17 +1,15 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import VueGrid from "@liqueflies/vue-flex-grid";
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import VueGrid from '@liqueflies/vue-flex-grid'
 import ChallengeCard from "./components/ChallengeCard.vue";
-import VueCodemirror from "vue-codemirror";
-import "codemirror/lib/codemirror.css";
-import "codemirror/mode/clike/clike.js";
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
-import ResultsCard from "./components/ResultsCard.vue";
-import vuetify from "./plugins/vuetify";
-import "./plugins/codemirror";
+import VueCodemirror from 'vue-codemirror';
+import 'codemirror/lib/codemirror.css';
+import 'codemirror/mode/clike/clike.js';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+import ResultsCard from './components/ResultsCard.vue';
 
 Vue.config.productionTip = false;
 
@@ -25,6 +23,5 @@ Vue.component("results-card", ResultsCard);
 new Vue({
   router,
   store,
-  vuetify,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app');
