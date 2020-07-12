@@ -38,4 +38,8 @@ export default {};
 .v-card {
   margin: 20px;
 }
+
+.text-btn:before {
+  opacity: 0 !important;
+}
 </style>
