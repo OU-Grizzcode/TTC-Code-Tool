@@ -1,7 +1,12 @@
 <template>
   <div>
     <v-card>
-      <v-card-title>{{challenges[id].title}}</v-card-title>
+      <v-card-title>
+        <v-btn icon>
+          <v-icon @click="goBack()">arrow_back</v-icon>
+        </v-btn>
+        {{challenges[id].title}}
+      </v-card-title>
 
       <v-card-text class="description">
         {{challenges[id].description}}
@@ -9,7 +14,7 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn text v-on:click="run()">Run</v-btn>
+        <v-btn text class="text-btn" v-on:click="run()">Run</v-btn>
       </v-card-actions>
     </v-card>
     <v-scroll-y-transition :hide-on-leave="true">
@@ -20,6 +25,7 @@
 <script>
 import Store from "../store";
 import CInterpreter from "../CInterpreter.js";
+import Router from "../router";
 
 export default {
   name: "ChallengeView",
@@ -49,6 +55,10 @@ export default {
     }
   },
   methods: {
+    goBack() {
+      Router.go(-1);
+    },
+
     run() {
       this.timesRun++;
       var challenge = this.challenges[this.id];
