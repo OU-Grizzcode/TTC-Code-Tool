@@ -11,11 +11,13 @@
     </div>
     <v-card-text>{{challenge.shortDescription}}</v-card-text>
     <v-card-actions>
+
       <v-btn
         text
         class="text-btn"
         :to="{ name: 'Challenge', params: { id: this.challenge.id } }"
       >Try It!</v-btn>
+
     </v-card-actions>
   </v-card>
 </template>

@@ -8,7 +8,7 @@
         {{challenges[id].title}}
       </v-card-title>
 
-      <v-card-text>
+      <v-card-text class="description">
         {{challenges[id].description}}
         <codemirror class="codemirror" v-model="code" :options="cmOptions" />
       </v-card-text>
@@ -91,6 +91,7 @@ export default {
           this.error = 'error on input "' + input + '":\n\n' + response;
           break;
         } else this.error = "";
+        console.log(response);
         if (response == cases[i].output) passed++;
         else failed++;
       }
@@ -112,6 +113,10 @@ export default {
 </script>
 
 <style scoped>
+.description {
+  text-align: left;
+}
+
 .codemirror {
   text-align: left;
 }
