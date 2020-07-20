@@ -55,5 +55,27 @@
 		],
 		"templateCode": "int factorial(int i){\n    return 0; // TODO: make return factorial\n}",
 		"hiddenCode": "#include \"stdio.h\"\n${user-code}$\n int main(){ int i; scanf(\"%d\", &i); printf(\"%d\", factorial(i)); return 0;}"
+	},
+	{
+		"title": "FizzBuzz",
+		"shortDescription": "A classic programming interview question.",
+		"description": "Write a program that prints numbers 1 through 100 on seperate lines, but for multiples of 3 instead print \"Fizz\", for multiples of 5 print \"Buzz\", and for multiples of both print \"FizzBuzz\". For example, 2 would be printed, 6 would print \"Fizz\", 10 would print \"Buzz\", and 15 would print \"FizzBuzz\". Note: your output IS case sensitive, and each number's output MUST be on a seperate line. If you're stuck keep in mind the first thing your program should output is a 1 and the last thing your code should output is a line break.",
+		"highlighting": "clike",
+		"lang": "c",
+		"id": 2,
+		"tags": [
+			"intermediate",
+			"interview",
+			"loops",
+			"C"
+		],
+		"testCases": [
+			{
+				"input": "",
+				"output": "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n64\nBuzz\nFizz\n67\n68\nFizz\nBuzz\n71\nFizz\n73\n74\nFizzBuzz\n76\n77\nFizz\n79\nBuzz\nFizz\n82\n83\nFizz\nBuzz\n86\nFizz\n88\n89\nFizzBuzz\n91\n92\nFizz\n94\nBuzz\nFizz\n97\n98\nFizz\nBuzz\n"
+			}
+		],
+		"templateCode": "",
+		"hiddenCode": "${user-code}$"
 	}
 ]
