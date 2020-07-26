@@ -11,13 +11,11 @@
     </div>
     <v-card-text>{{challenge.shortDescription}}</v-card-text>
     <v-card-actions>
-
       <v-btn
         text
         class="text-btn"
         :to="{ name: 'Challenge', params: { id: this.challenge.id } }"
       >Try It!</v-btn>
-
     </v-card-actions>
   </v-card>
 </template>
@@ -45,6 +43,6 @@ export default {
 }
 .v-chip {
   cursor: pointer;
-  margin: 0 5px 0 5px;
+  margin: 2.5px;
 }
 </style>

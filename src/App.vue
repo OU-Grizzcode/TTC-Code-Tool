@@ -12,6 +12,7 @@
     <v-scroll-x-transition :hide-on-leave="true">
       <router-view />
     </v-scroll-x-transition>
+    <info-bar />
   </div>
 </template>
 

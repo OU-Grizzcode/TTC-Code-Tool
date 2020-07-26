@@ -10,6 +10,8 @@ import 'codemirror/mode/clike/clike.js';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import ResultsCard from './components/ResultsCard.vue';
+import InfoBar from './components/InfoBar.vue';
+import '@mdi/font/css/materialdesignicons.css'
 
 Vue.config.productionTip = false;
 
@@ -19,6 +21,7 @@ Vue.use(Vuetify);
 
 Vue.component("challenge-card", ChallengeCard);
 Vue.component("results-card", ResultsCard);
+Vue.component("info-bar", InfoBar);
 
 new Vue({
   router,
