@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <v-card>
-      <v-card-title>Welcome to Grizzcode!</v-card-title>
+      <v-flex>
+        <h3 class="titleIntro">welcome to</h3>
+        <img src="../assets/logo.svg" />
+      </v-flex>
       <v-card-text>
         Grizzcode is an interactive website from the OU Tutoring Center to
         help students learn programming. You can choose a challenge below, or, if you're new, you can start with a
@@ -34,3 +37,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.titleIntro {
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+</style>
