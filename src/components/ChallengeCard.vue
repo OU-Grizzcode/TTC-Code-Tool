@@ -26,8 +26,8 @@ export default {
     return { hover: false };
   },
   props: {
-    challenge: Object
-  }
+    challenge: Object,
+  },
 };
 </script>
 
@@ -43,6 +43,7 @@ export default {
 }
 .v-chip {
   cursor: pointer;
+  user-select: none;
   margin: 2.5px;
 }
 </style>
