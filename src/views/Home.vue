@@ -50,13 +50,18 @@ export default {
         var ranks = []; //contains challenges with ranks, low is better
         for (var n of Store.state.challenges) {
           //weights for properties
-          const titleWeight = 1;
-          const tagWeight = 1;
+          const titleWeight = 1 / 1;
+          const tagWeight = 1 / 1;
+          const perfectMatch = -100;
 
           var rank = 0;
           rank += titleWeight * this.editDist(n.title, this.query);
-          for (var t of n.tags)
-            rank += (tagWeight / n.tags.length) * this.editDist(t, this.query);
+          for (var t of n.tags) {
+            if (t == this.query) rank += perfectMatch;
+            else
+              rank +=
+                (tagWeight / n.tags.length) * this.editDist(t, this.query);
+          }
           //we divide here because not all challenges have an equal number of tags.
 
           ranks.push({ rank: rank, challenge: n });

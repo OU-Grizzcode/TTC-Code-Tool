@@ -7,7 +7,7 @@
   >
     <v-card-title>{{challenge.title}}</v-card-title>
     <div>
-      <v-chip v-for="tag in challenge.tags" v-bind:key="tag">{{tag}}</v-chip>
+      <v-chip v-for="tag in challenge.tags" v-bind:key="tag" v-on:click="query=tag">{{tag}}</v-chip>
     </div>
     <v-card-text>{{challenge.shortDescription}}</v-card-text>
     <v-card-actions>
@@ -21,12 +21,23 @@
 </template>
 
 <script>
+import Store from "../store";
 export default {
   data: () => {
     return { hover: false };
   },
   props: {
     challenge: Object,
+  },
+  computed: {
+    query: {
+      get() {
+        return Store.state.searchQuery;
+      },
+      set(val) {
+        Store.commit("updateSearchQuery", val);
+      },
+    },
   },
 };
 </script>
