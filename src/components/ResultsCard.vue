@@ -3,12 +3,19 @@
     <v-card-title>
       Results
       <v-icon
+        id="status-icon"
         large
         style="color: rgb(46,234,0);"
         v-if="results.failingTests == 0 && results.error == ''"
       >check_circle_round</v-icon>
-      <v-icon large style="color: rgb(255, 25, 75);" v-if="results.error != ''">error_round</v-icon>
       <v-icon
+        id="status-icon"
+        large
+        style="color: rgb(255, 25, 75);"
+        v-if="results.error != ''"
+      >error_round</v-icon>
+      <v-icon
+        id="status-icon"
         large
         style="color: rgb(255,200,0);"
         v-if="results.failingTests != 0 && results.error == ''"
@@ -18,10 +25,11 @@
       <textarea
         v-if="results.error != ''"
         class="errorarea"
+        id="errors"
         v-model="results.error"
         readonly="true"
       />
-      <div v-if="results.error==''">
+      <div id="status" v-if="results.error==''">
         <h4>Passing: {{results.passingTests}}</h4>
         <h4>Failing: {{results.failingTests}}</h4>
       </div>
@@ -32,8 +40,8 @@
 <script>
 export default {
   props: {
-    results: Object
-  }
+    results: Object,
+  },
 };
 </script>
 

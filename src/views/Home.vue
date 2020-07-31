@@ -8,9 +8,7 @@
       <v-card-text class="intro">
         Grizzcode is an interactive website from the OU Tutoring Center to
         help students learn programming. You can choose a challenge below, or, if you're new, you can start with a
-        <a
-          href
-        >tutorial</a>.
+        <router-link :to="{name:'Tutorial'}">tutorial</router-link>.
       </v-card-text>
 
       <v-text-field v-model="query" class="search" placeholder="search challenges"></v-text-field>

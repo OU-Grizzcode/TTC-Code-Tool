@@ -2,23 +2,23 @@
   <div>
     <v-card>
       <v-card-title>
-        <v-btn icon>
+        <v-btn id="back-btn" icon>
           <v-icon @click="goBack()">arrow_back</v-icon>
         </v-btn>
         {{challenges[id].title}}
       </v-card-title>
 
       <v-card-text class="description">
-        {{challenges[id].description}}
-        <codemirror class="codemirror" v-model="code" :options="cmOptions" />
+        <div id="description">{{challenges[id].description}}</div>
+        <codemirror id="code" class="codemirror" v-model="code" :options="cmOptions" />
       </v-card-text>
 
       <v-card-actions>
-        <v-btn text class="text-btn" v-on:click="run()">Run</v-btn>
+        <v-btn text id="run-btn" class="text-btn" v-on:click="run()">Run</v-btn>
       </v-card-actions>
     </v-card>
     <v-scroll-y-transition :hide-on-leave="true">
-      <results-card v-if="timesRun > 0" :results="results" :key="timesRun" />
+      <results-card id="results-card" v-if="timesRun > 0" :results="results" :key="timesRun" />
     </v-scroll-y-transition>
   </div>
 </template>
@@ -44,15 +44,15 @@ export default {
         showCursorWhenSelecting: true,
         passingTests: 0,
         failingTests: 0,
-        results: Object
-      }
+        results: Object,
+      },
     };
   },
   props: ["id"],
   computed: {
     challenges: () => {
       return Store.state.challenges;
-    }
+    },
   },
   methods: {
     goBack() {
@@ -101,14 +101,14 @@ export default {
       this.results = {
         passingTests: this.passingTests,
         failingTests: this.failingTests,
-        error: this.error
+        error: this.error,
       };
-    }
+    },
   },
   mounted() {
     this.cmOptions.mode = this.challenges[this.id].highlighting; // set syntax highlighting to appropriate language
     this.code = this.challenges[this.id].templateCode; // insert template code
-  }
+  },
 };
 </script>
 

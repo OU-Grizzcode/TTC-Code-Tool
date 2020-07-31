@@ -12,12 +12,16 @@ import 'vuetify/dist/vuetify.min.css';
 import ResultsCard from './components/ResultsCard.vue';
 import InfoBar from './components/InfoBar.vue';
 import '@mdi/font/css/materialdesignicons.css'
+import VueTour from 'vue-tour'
+
+require('vue-tour/dist/vue-tour.css');
 
 Vue.config.productionTip = false;
 
 Vue.use(VueGrid);
 Vue.use(VueCodemirror);
 Vue.use(Vuetify);
+Vue.use(VueTour);
 
 Vue.component("challenge-card", ChallengeCard);
 Vue.component("results-card", ResultsCard);
