@@ -25,7 +25,7 @@ export default {};
 <style scoped>
 .v-footer {
   margin-top: 25px;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
 }

@@ -34,6 +34,7 @@ export default {
   data() {
     return {};
   },
+  props: ["crn"],
   components: {},
   computed: {
     query: {
@@ -45,15 +46,24 @@ export default {
       },
     },
     challenges() {
-      if (this.query == "") return Store.state.challenges;
-      else {
+      if (this.query == "") {
+        if (this.crn != 0) {
+          var list = [];
+          for (n of Store.state.challenges) {
+            if (n.crn == this.crn) {
+              list.push(n);
+            }
+          }
+          return list;
+        } else return Store.state.challenges;
+      } else {
         var ranks = []; //contains challenges with ranks, low is better
         for (var n of Store.state.challenges) {
           //weights for properties
           const titleWeight = 1 / 1;
           const tagWeight = 1 / 1;
           const perfectMatch = -100;
-
+          if (this.crn != 0 && n.crn != this.crn) continue; //if crn is specified skip if not same crn.
           var rank = 0;
           rank += titleWeight * this.editDist(n.title, this.query);
           for (var t of n.tags) {

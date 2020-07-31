@@ -7,12 +7,13 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/:crn',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: true
   },
   {
-    path: '/challenge/:id',
+    path: '/:crn/challenge/:id',
     name: 'Challenge',
     component: ChallengeView,
     props: true
