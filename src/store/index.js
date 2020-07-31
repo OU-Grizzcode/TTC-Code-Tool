@@ -6,9 +6,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    challenges: challengesJSON
+    challenges: challengesJSON,
+    searchQuery: ""
+
   },
   mutations: {
+    updateSearchQuery(state, val) {
+      state.searchQuery = val;
+    }
   },
   actions: {
   },
