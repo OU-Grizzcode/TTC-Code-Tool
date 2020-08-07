@@ -97,6 +97,11 @@ export default {
   },
   methods: {
     editDist: function (s, t) {
+      var test = require.context("@/assets/challenges", true, /^.*\.json$/);
+      console.log(test.keys()[0]);
+      var test2 = import("@/assets/challenges/" + test.keys()[0]);
+      console.log(test2);
+
       if (s === t) {
         return 0;
       }
