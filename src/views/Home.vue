@@ -26,7 +26,6 @@
 
 <script>
 import Store from "../store";
-import axios from "axios";
 
 export default {
   name: "Home",
@@ -98,10 +97,6 @@ export default {
   },
   methods: {
     editDist: function (s, t) {
-      var test = require.context("@/../public/challenges");
-      console.log(test.keys()[0]);
-      axios.get("/challenges/").then((response) => console.log(response));
-
       if (s === t) {
         return 0;
       }
