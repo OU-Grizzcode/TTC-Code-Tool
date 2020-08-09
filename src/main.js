@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import VueGrid from '@liqueflies/vue-flex-grid'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import VueGrid from '@liqueflies/vue-flex-grid';
 import ChallengeCard from "./components/ChallengeCard.vue";
 import VueCodemirror from 'vue-codemirror';
 import 'codemirror/lib/codemirror.css';
@@ -11,8 +11,10 @@ import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 import ResultsCard from './components/ResultsCard.vue';
 import InfoBar from './components/InfoBar.vue';
-import '@mdi/font/css/materialdesignicons.css'
-import VueTour from 'vue-tour'
+import '@mdi/font/css/materialdesignicons.css';
+import VueTour from 'vue-tour';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
 require('vue-tour/dist/vue-tour.css');
 
@@ -22,6 +24,7 @@ Vue.use(VueGrid);
 Vue.use(VueCodemirror);
 Vue.use(Vuetify);
 Vue.use(VueTour);
+Vue.use(VueAxios, axios);
 
 Vue.component("challenge-card", ChallengeCard);
 Vue.component("results-card", ResultsCard);

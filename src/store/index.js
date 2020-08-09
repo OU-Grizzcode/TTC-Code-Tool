@@ -1,18 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import challengesJSON from "../assets/Challenges.json";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    challenges: challengesJSON,
-    searchQuery: ""
+    challenges: [],
+    searchQuery: "",
 
   },
   mutations: {
     updateSearchQuery(state, val) {
       state.searchQuery = val;
+    },
+    addChallenge(state, val) {
+      state.challenges.splice(val.id, 0, val);
     }
   },
   actions: {
