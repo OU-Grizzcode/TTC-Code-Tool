@@ -21,7 +21,6 @@ import axios from "axios";
 import store from "@/store";
 export default {
   mounted() {
-    // var challengeNames = [];
     axios.get("/challenges/").then((response) => {
       for (var n of response.data) {
         axios.get("/challenges/" + n).then((response) => {

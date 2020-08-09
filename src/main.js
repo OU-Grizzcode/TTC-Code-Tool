@@ -15,7 +15,6 @@ import '@mdi/font/css/materialdesignicons.css';
 import VueTour from 'vue-tour';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-import circle from "vue-loading-spinner/src/components";
 
 require('vue-tour/dist/vue-tour.css');
 
@@ -30,7 +29,6 @@ Vue.use(VueAxios, axios);
 Vue.component("challenge-card", ChallengeCard);
 Vue.component("results-card", ResultsCard);
 Vue.component("info-bar", InfoBar);
-Vue.component("loading-spinner", circle);
 
 new Vue({
   router,

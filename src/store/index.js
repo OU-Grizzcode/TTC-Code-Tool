@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     challenges: [],
-    searchQuery: ""
+    searchQuery: "",
 
   },
   mutations: {
@@ -14,7 +14,7 @@ export default new Vuex.Store({
       state.searchQuery = val;
     },
     addChallenge(state, val) {
-      state.challenges[val.id] = val;
+      state.challenges.splice(val.id, 0, val);
     }
   },
   actions: {
