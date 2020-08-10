@@ -8,19 +8,19 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/:crn',
+    path: '/',
     name: 'Home',
     component: Home,
     props: true
   },
   {
-    path: '/:crn/challenge/:id',
+    path: '/challenge/:id',
     name: 'Challenge',
     component: ChallengeView,
     props: true
   },
   {
-    path: '/:crn/tutorial',
+    path: '/tutorial',
     name: 'Tutorial',
     component: Tutorial,
   }

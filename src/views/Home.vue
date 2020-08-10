@@ -32,7 +32,6 @@ export default {
   data() {
     return {};
   },
-  props: ["crn"],
   components: {},
   computed: {
     query: {
@@ -44,24 +43,15 @@ export default {
       },
     },
     challenges() {
-      if (this.query == "") {
-        if (this.crn != 0) {
-          var list = [];
-          for (n of Store.state.challenges) {
-            if (n.crn == this.crn) {
-              list.push(n);
-            }
-          }
-          return list;
-        } else return Store.state.challenges;
-      } else {
+      if (this.query == "") return Store.state.challenges;
+      else {
         var ranks = []; //contains challenges with ranks, low is better
         for (var n of Store.state.challenges) {
           //weights for properties
           const titleWeight = 1 / 1;
           const tagWeight = 1 / 1;
           const perfectMatch = -100;
-          if (this.crn != 0 && n.crn != this.crn) continue; //if crn is specified skip if not same crn.
+          const CRNMatch = -1000;
           var rank = 0;
           rank += titleWeight * this.editDist(n.title, this.query);
           for (var t of n.tags) {
@@ -70,10 +60,11 @@ export default {
               rank +=
                 (tagWeight / n.tags.length) * this.editDist(t, this.query);
           }
-          //we divide here because not all challenges have an equal number of tags.
+          //we divide above because not all challenges have an equal number of tags.
+
+          if (this.query.toUpperCase() == n.crn.toUpperCase()) rank += CRNMatch; //check for CRN
 
           ranks.push({ rank: rank, challenge: n });
-          rank = -2;
         }
 
         var edits = 1;
