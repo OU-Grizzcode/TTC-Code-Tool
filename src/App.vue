@@ -21,9 +21,9 @@ import axios from "axios";
 import store from "@/store";
 export default {
   mounted() {
-    axios.get("/challenges/index.json").then((response) => {
+    axios.get("challenges").then((response) => {
       for (var n of response.data) {
-        axios.get("/challenges/" + n).then((response) => {
+        axios.get("challenges/" + n).then((response) => {
           store.commit("addChallenge", response.data);
         });
       }
