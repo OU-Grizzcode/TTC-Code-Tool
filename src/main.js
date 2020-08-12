@@ -18,6 +18,8 @@ import VueAxios from 'vue-axios';
 
 require('vue-tour/dist/vue-tour.css');
 
+
+//makes it so vue won't yell at me
 Vue.config.productionTip = false;
 
 Vue.use(VueGrid);
