@@ -1,0 +1,20 @@
+{
+	"title": "Template",
+	"shortDescription": "noitpircsed",
+	"description": "description",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 999,
+	"tags": [
+		"tag"
+	],
+	"testCases": [
+		{
+			"input": "1",
+			"output": "1"
+		}
+	],
+	"templateCode": "",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}
