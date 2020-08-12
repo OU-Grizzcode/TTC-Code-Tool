@@ -1,5 +1,5 @@
 <template>
-  <!-- Yeah, I know vuetify has a hover component, this is honestly easier. -->
+  <!-- Yeah, I know vuetify has a hover component, this is easier. -->
   <v-card
     :class="`elevation-${hover? 10: 1}`"
     @mouseover="hover = true"
