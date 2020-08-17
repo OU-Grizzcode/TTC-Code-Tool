@@ -1,0 +1,43 @@
+{
+	"title": "Sort 1",
+	"shortDescription": "Take in 3 integers and print them in order.",
+	"description": "Write a program that takes in 3 integers and prints them sorted from highest to lowest seperated by commas. For example, if your program takes in 1, 2, and 3 it should print '3,2,1'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 7,
+	"tags": [
+		"Beginner",
+		"Conditionals",
+		"Sorting",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "1 2 3",
+			"output": "3,2,1"
+		},
+		{
+			"input": "5 3 7",
+			"output": "7,5,3"
+		},
+		{
+			"input": "1 9 3",
+			"output": "9,3,1"
+		},
+		{
+			"input": "5 4 3",
+			"output": "5,4,3"
+		},
+		{
+			"input": "5 5 3",
+			"output": "5,5,3"
+		},
+		{
+			"input": "1 1 1",
+			"output": "1,1,1"
+		}
+	],
+	"templateCode": "#include <stdio.h>\nint main(){\n\t//TODO: take in numbers and output in order.\n\treturn 0;\n}",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}

@@ -86,12 +86,13 @@ export default {
       for (let i in cases) {
         var input = cases[i].input;
         var response = interpreter.run(completeCode, input);
+        console.log(response);
+
         // if code errors log the error and break
         if (response.includes("ERROR:")) {
           this.error = 'error on input "' + input + '":\n\n' + response;
           break;
         } else this.error = "";
-        console.log(response);
         if (response == cases[i].output) passed++;
         else failed++;
       }

@@ -1,0 +1,34 @@
+{
+	"title": "List Average",
+	"shortDescription": "Find the average of a long list of integers.",
+	"description": "Write a program that will repeatedly take in a single integer until it recieves the input -1. Then, it will return the integer average of the numbers (excluding the -1).",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 6,
+	"tags": [
+		"Intermediate",
+		"Loops",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "1 1 1 1 1 -1",
+			"output": "1"
+		},
+		{
+			"input": "0 10 5 -1",
+			"output": "5"
+		},
+		{
+			"input": "1 2 3 -1",
+			"output": "2"
+		},
+		{
+			"input": "0 10 20 30 40 50 -1",
+			"output": "25"
+		}
+	],
+	"templateCode": "#include <stdio.h>\nint main(){\n\t//TODO: take in numbers and output average.\n\treturn 0;\n}",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}

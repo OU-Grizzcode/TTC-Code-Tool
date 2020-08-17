@@ -1,14 +1,14 @@
 {
 	"title": "Functions",
-	"shortDescription": "Write a function.",
+	"shortDescription": "Write a basic function.",
 	"description": "Write a function called 'multiply' that takes in two integers, and returns their product as an integer.",
 	"highlighting": "clike",
 	"lang": "c",
 	"id": 3,
 	"tags": [
-		"C",
 		"Beginner",
-		"Functions"
+		"Functions",
+		"C"
 	],
 	"testCases": [
 		{

@@ -2,5 +2,12 @@
 	"factorial.json",
 	"fizzbuzz.json",
 	"helloworld.json",
-	"functions.json"
+	"functions.json",
+	"reversenumber.json",
+	"detectpalindrome.json",
+	"listaverage.json",
+	"sort1.json",
+	"sort2.json",
+	"helloname.json",
+	"pow.json"
 ]
