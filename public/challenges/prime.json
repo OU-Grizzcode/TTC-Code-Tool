@@ -1,0 +1,46 @@
+{
+	"title": "Prime Numbers",
+	"shortDescription": "Write a function that detects prime numbers.",
+	"description": "Write a function that takes in an integer n and returns 1 if n is prime and 0 if n is not prime.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 18,
+	"tags": [
+		"Intermediate",
+		"Math",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "4",
+			"output": "0"
+		},
+		{
+			"input": "1",
+			"output": "1"
+		},
+		{
+			"input": "2",
+			"output": "1"
+		},
+		{
+			"input": "15",
+			"output": "0"
+		},
+		{
+			"input": "7",
+			"output": "1"
+		},
+		{
+			"input": "5",
+			"output": "1"
+		},
+		{
+			"input": "21",
+			"output": "0"
+		}
+	],
+	"templateCode": "int isPrime(int n){\r\n\t//TODO: Return 1 if number is prime and 0 if number is not.\r\n}",
+	"hiddenCode": "#include<stdio.h>\r\n${user-code}$\r\nint main(){\r\n   int a;\r\n   scanf(\"%d\", &a);\r\n   printf(\"%d\",isPrime(a));\r\n   return 0;\r\n}",
+	"crn": "CSI1420"
+}

@@ -1,0 +1,47 @@
+{
+	"title": "Root Finder 2",
+	"shortDescription": "Write a function that finds nth root.",
+	"description": "Write a function that takes in an integer i and an integer n, then returns the nth root of i as an integer. Note: You may not use 'math.h'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 17,
+	"tags": [
+		"Advanced",
+		"Loops",
+		"Math",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "4 2",
+			"output": "2"
+		},
+		{
+			"input": "1 3",
+			"output": "1"
+		},
+		{
+			"input": "125 2",
+			"output": "11"
+		},
+		{
+			"input": "15 2",
+			"output": "3"
+		},
+		{
+			"input": "2 7",
+			"output": "1"
+		},
+		{
+			"input": "32 5",
+			"output": "2"
+		},
+		{
+			"input": "125 3",
+			"output": "5"
+		}
+	],
+	"templateCode": "int nrt(int i, int n){\r\n\t//TODO: Return nth root of i.\r\n}",
+	"hiddenCode": "#include<stdio.h>\r\n${user-code}$\r\nint main(){\r\n   int a; int b;\r\n   scanf(\"%d %d\", &a, &b);\r\n   printf(\"%d\",nrt(a, b));\r\n   return 0;\r\n}",
+	"crn": "CSI1420"
+}

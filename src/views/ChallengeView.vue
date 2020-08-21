@@ -85,16 +85,22 @@ export default {
       // run code on all cases
       for (let i in cases) {
         var input = cases[i].input;
-        var response = interpreter.run(completeCode, input);
-        console.log(response);
+        try {
+          var response = interpreter.run(completeCode, input);
+          console.log(response);
+          console.log(cases[i].output);
 
-        // if code errors log the error and break
-        if (response.includes("ERROR:")) {
-          this.error = 'error on input "' + input + '":\n\n' + response;
+          // if code errors log the error and break
+          if (response.includes("ERROR:")) {
+            this.error = 'error on input "' + input + '":\n\n' + response;
+            break;
+          } else this.error = "";
+          if (response == cases[i].output) passed++;
+          else failed++;
+        } catch {
+          this.error = "Unknown error.";
           break;
-        } else this.error = "";
-        if (response == cases[i].output) passed++;
-        else failed++;
+        }
       }
 
       this.passingTests = passed;
