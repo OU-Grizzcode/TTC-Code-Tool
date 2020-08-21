@@ -204,4 +204,7 @@ export default {
   padding-bottom: 0px;
   margin-bottom: -10px;
 }
+.wrappingRow {
+  padding-bottom: 50px;
+}
 </style>

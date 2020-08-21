@@ -1,0 +1,23 @@
+{
+	"title": "Fibonacci",
+	"shortDescription": "Print 20 digits of the Fibonacci sequence.",
+	"description": "Write a program that prints the first 20 digits of the fibonacci sequence with each digit followed by a space, e.x. '1 1 2 3 '...",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 13,
+	"tags": [
+		"Advanced",
+		"Recursion",
+		"Loops",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "",
+			"output": "1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 "
+		}
+	],
+	"templateCode": "#include<stdio.h>\r\n\r\nint main(){\r\n  \r\n  \/\/TODO: Print the first 100 digits of the Fibonacci sequence.\r\n  \r\n  return 0;\r\n}",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}

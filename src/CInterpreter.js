@@ -16,7 +16,9 @@ export default class CInterpreter {
 			JSCPP.run(code, input, conf);
 			return output;
 		} catch (error) {
-			return error;
+			if (error.includes("ERROR: "))
+				return error;
+			else return "ERROR:\n" + error;
 		}
 	}
 }

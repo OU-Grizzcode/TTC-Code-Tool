@@ -1,0 +1,37 @@
+{
+	"title": "Hello *Name*",
+	"shortDescription": "A good second challenge.",
+	"description": "Write a program that takes in a string with a max size of 10 characters and prints 'Hello ' then the string. Ex. if a user inputs 'foo' your program should print 'Hello foo'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 9,
+	"tags": [
+		"Beginner",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "test",
+			"output": "Hello test"
+		},
+		{
+			"input": "jeff",
+			"output": "Hello jeff"
+		},
+		{
+			"input": "tim",
+			"output": "Hello tim"
+		},
+		{
+			"input": "foobar",
+			"output": "Hello foobar"
+		},
+		{
+			"input": "12345",
+			"output": "Hello 12345"
+		}
+	],
+	"templateCode": "#include <stdio.h>\nint main(){\n  //TODO: print \"hello *name*\"\n  return 0;\n}",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}

@@ -1,0 +1,42 @@
+{
+	"title": "Palindrome Detection",
+	"shortDescription": "Detect if a string is a palindrome.",
+	"description": "Write a function that takes in a pointer to a string and detects if the string is a palindrome, return 1 if it is, return 0 otherwise. A palindrome is a string that is the same when read backwards, ex. 'tacocat', 'racecar', 'palindromemordnilap'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 5,
+	"tags": [
+		"Advanced",
+		"Pointers",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "racecar",
+			"output": "1"
+		},
+		{
+			"input": "tacocat",
+			"output": "1"
+		},
+		{
+			"input": "hello",
+			"output": "0"
+		},
+		{
+			"input": "testcase",
+			"output": "0"
+		},
+		{
+			"input": "notapalindrome",
+			"output": "0"
+		},
+		{
+			"input": "helloolleh",
+			"output": "1"
+		}
+	],
+	"templateCode": "int detectPalindrome(char* n){\r\n//TODO: determine if n is a palindrome\r\n}",
+	"hiddenCode": "#include <stdio.h>\r\n\r\n${user-code}$\r\n\r\nint main(){\r\n\r\n\tchar input[100];\r\n\r\n\tscanf(\"%s\", input);\r\n\r\n\tprintf(\"%d\", detectPalindrome(input));\r\n\r\n\treturn 0;\r\n}",
+	"crn": "CSI1420"
+}

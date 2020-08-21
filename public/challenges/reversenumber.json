@@ -1,0 +1,39 @@
+{
+	"title": "Reverse Number",
+	"shortDescription": "Reverse an integer.",
+	"description": "Write a function that takes in an integer and returns that integer reversed. For example, if the number 1482 was recieved 2841 would be returned.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 4,
+	"tags": [
+		"Intermediate",
+		"Loops",
+		"Remainder",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "123",
+			"output": "321"
+		},
+		{
+			"input": "3245034",
+			"output": "4305423"
+		},
+		{
+			"input": "67034",
+			"output": "43076"
+		},
+		{
+			"input": "203",
+			"output": "302"
+		},
+		{
+			"input": "2048",
+			"output": "8402"
+		}
+	],
+	"templateCode": "int reverse(int n){\r\n//TODO: return reversed number\r\n}",
+	"hiddenCode": "#include<stdio.h>\r\n${user-code}$\r\nint main(){\r\n\r\n\tint a;\r\n\r\n\tscanf(\"%d\", &a);\r\n\tprintf(\"%d\", reverse(a));\r\n\r\n\treturn 0;\r\n}",
+	"crn": "CSI1420"
+}

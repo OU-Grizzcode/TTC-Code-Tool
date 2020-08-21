@@ -1,0 +1,46 @@
+{
+	"title": "Divisibility",
+	"shortDescription": "Write a program that detects divisibility.",
+	"description": "Write a program that takes in two numbers seperated by a space and prints 1 if the first is divisible by the second, 2 if the second is divisible by the first, 3 if they are both divisible by each other, and 0 if there is no divisibility.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 19,
+	"tags": [
+		"Beginner",
+		"Math",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "4 1",
+			"output": "1"
+		},
+		{
+			"input": "2 3",
+			"output": "0"
+		},
+		{
+			"input": "3 3",
+			"output": "3"
+		},
+		{
+			"input": "5 25",
+			"output": "2"
+		},
+		{
+			"input": "1 2",
+			"output": "2"
+		},
+		{
+			"input": "5 6",
+			"output": "0"
+		},
+		{
+			"input": "7 21",
+			"output": "2"
+		}
+	],
+	"templateCode": "",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}
