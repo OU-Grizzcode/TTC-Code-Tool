@@ -1,0 +1,38 @@
+{
+	"title": "Quadratic Root Finder",
+	"shortDescription": "Write a program that finds the roots of a quadratic equation.",
+	"description": "Write a program that takes in 3 integers and prints the roots of a quadratic equation, printing -1 if the root doesn't exist. with the numbers as it's three terms, and then prints it's roots as integers in ascending order. For example if your program takes in '1 2 3' it should print '-1 -1', if your program takes in '2 3 -5' then it should print '-2 1'. You may use the 'sqrt' function from 'math.h'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 15,
+	"tags": [
+		"Intermediate",
+		"Math",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "2 3 -5",
+			"output": "-2 1"
+		},
+		{
+			"input": "1 2 3",
+			"output": "-1 -1"
+		},
+		{
+			"input": "1 3 1",
+			"output": "-2 0"
+		},
+		{
+			"input": "3 3 -3",
+			"output": "-1 0"
+		},
+		{
+			"input": "1 -2 -5",
+			"output": "-1 3"
+		}
+	],
+	"templateCode": "#include<stdio.h>\r\n\r\nint main(){\r\n  \r\n  \/\/TODO: Take in an integers and print roots.\r\n  \r\n  return 0;\r\n}",
+	"hiddenCode": "#include<math.h>${user-code}$",
+	"crn": "CSI1420"
+}

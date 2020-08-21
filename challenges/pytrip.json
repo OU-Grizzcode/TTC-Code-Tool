@@ -1,0 +1,46 @@
+{
+	"title": "Pythagorean triples",
+	"shortDescription": "Write a function that detects pythagorean triples.",
+	"description": "Write a function that takes in 3 integers a, b, and c and returns 1 if they are pythagorean triples and 0 if they are not. Note: you may use the 'sqrt' function from 'math.h', and c will always be the potential hypotenuse.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 20,
+	"tags": [
+		"Intermediate",
+		"Math",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "4 5 6",
+			"output": "0"
+		},
+		{
+			"input": "3 4 5",
+			"output": "1"
+		},
+		{
+			"input": "11 60 61",
+			"output": "1"
+		},
+		{
+			"input": "9 40 41",
+			"output": "1"
+		},
+		{
+			"input": "0 0 0",
+			"output": "1"
+		},
+		{
+			"input": "25 91 66",
+			"output": "0"
+		},
+		{
+			"input": "21 92 56",
+			"output": "0"
+		}
+	],
+	"templateCode": "int isPyTrip(int a, int b, int c){\r\n\t//TODO: Return 1 if numbers are pythagorean triples and 0 if numbers are not.\r\n}",
+	"hiddenCode": "#include<stdio.h>\n#include<math.h>\r\n${user-code}$\r\nint main(){\r\n   int a,b,c;\r\n   scanf(\"%d %d %d\", &a, &b, &c);\r\n   printf(\"%d\",isPyTrip(a,b,c));\r\n   return 0;\r\n}",
+	"crn": "CSI1420"
+}

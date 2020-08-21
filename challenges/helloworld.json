@@ -1,0 +1,21 @@
+{
+	"title": "Hello World",
+	"shortDescription": "A good first challenge.",
+	"description": "Print \"hello world\".",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 0,
+	"tags": [
+		"Beginner",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "",
+			"output": "hello world"
+		}
+	],
+	"templateCode": "#include <stdio.h>\nint main(){\n  //TODO: print \"hello world\"\n  return 0;\n}",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}

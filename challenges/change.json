@@ -1,0 +1,46 @@
+{
+	"title": "Change",
+	"shortDescription": "Write a program that finds the easiest way to make change.",
+	"description": "Write a program that takes in an integer and returns the easiest way to make that amount of money in cents with quarters, dimes, nickels, and penneys, outputting them in order of least valuble to most. For example if your program takes in '67' it would output '2 1 1 2'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 12,
+	"tags": [
+		"Intermediate",
+		"Math",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "67",
+			"output": "2 1 1 2"
+		},
+		{
+			"input": "10",
+			"output": "0 1 0 0"
+		},
+		{
+			"input": "25",
+			"output": "1 0 0 0"
+		},
+		{
+			"input": "4",
+			"output": "0 0 0 4"
+		},
+		{
+			"input": "100",
+			"output": "4 0 0 0"
+		},
+		{
+			"input": "26",
+			"output": "1 0 0 1"
+		},
+		{
+			"input": "82",
+			"output": "3 0 1 2"
+		}
+	],
+	"templateCode": "#include <stdio.h>\r\n\r\nint main(){\r\n\tint a;\r\n\r\n\tscanf(\"%d\",&a);\r\n\t\r\n\t//TODO: Print best way to make change for a cents.\r\n\t\r\n\treturn 0;\r\n}",
+	"hiddenCode": "${user-code}$",
+	"crn": "CSI1420"
+}

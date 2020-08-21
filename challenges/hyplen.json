@@ -1,0 +1,42 @@
+{
+	"title": "Hypotenuse Length",
+	"shortDescription": "Write a function that calculates the hypotenuse of a right triangle.",
+	"description": "Write a function that takes in two integer side lengths of a right triangle and returns the length of the hypotenuse as an integer. For example, if the function recieves 3 and 4, it should return 5. Note that you may use the 'sqrt' function from 'math.h'.",
+	"highlighting": "clike",
+	"lang": "c",
+	"id": 11,
+	"tags": [
+		"Intermediate",
+		"Functions",
+		"C"
+	],
+	"testCases": [
+		{
+			"input": "3 4",
+			"output": "5"
+		},
+		{
+			"input": "1 0",
+			"output": "1"
+		},
+		{
+			"input": "2 2",
+			"output": "2"
+		},
+		{
+			"input": "5 1",
+			"output": "5"
+		},
+		{
+			"input": "10 10",
+			"output": "14"
+		},
+		{
+			"input": "10 5",
+			"output": "11"
+		}
+	],
+	"templateCode": "int hypLen(int a, int b){\n\t//TODO: Return the hypotenuse of a right triangle with a and b as side lengths.\n}",
+	"hiddenCode": "#include <stdio.h>\n#include<math.h>\r\n\r\n${user-code}$\r\n\r\nint main(){\r\n\tint a,b;\r\n\r\n\tscanf(\"%d %d\",&a, &b);\r\n\r\n\tprintf(\"%d\", hypLen(a, b));\r\n\t\r\n\treturn 0;\r\n}",
+	"crn": "CSI1420"
+}
